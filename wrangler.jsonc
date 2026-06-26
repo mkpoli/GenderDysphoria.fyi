@@ -1,0 +1,14 @@
+{
+	// Temporary host for the Japanese preview of The Gender Dysphoria Bible,
+	// served as a Cloudflare Worker with static assets (same model as
+	// transnavi.jp). noindex + root→/ja/ come from dist/_headers and
+	// dist/_redirects. Retire / 301 to the upstream JA once the PR merges.
+	"name": "transnavi-bible",
+	"compatibility_date": "2026-05-31",
+	"routes": [
+		{ "pattern": "bible.transnavi.jp", "custom_domain": true }
+	],
+	"assets": {
+		"directory": "./dist"
+	}
+}
